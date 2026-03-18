@@ -1,8 +1,6 @@
 
 FROM ubuntu:latest
 
-ENV http_proxy=http://proxy.rd.francetelecom.fr:8080
-
 RUN apt update && apt install -y openssh-server openssh-client --no-install-recommends \
  && apt clean && rm -rf /var/lib/apt/lists/*
 
