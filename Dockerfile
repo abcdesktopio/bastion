@@ -11,14 +11,6 @@ RUN useradd -m user
 
 COPY files /
 
-RUN chown -R user:user /home/user/.ssh \
- && chmod 700 /home/user/.ssh \
- && chmod 600 /home/user/.ssh/authorized_keys \
- && chmod 755 /home/user
-
-RUN echo "PasswordAuthentication no" >> /etc/ssh/sshd_config \
- && echo "PubkeyAuthentication yes" >> /etc/ssh/sshd_config
-
 EXPOSE 22
 
 
