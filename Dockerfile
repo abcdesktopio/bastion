@@ -1,7 +1,7 @@
 
 FROM ubuntu:latest
 
-RUN apt update && apt install -y openssh-server openssh-client --no-install-recommends \
+RUN apt update && apt install -y openssh-server openssh-client curl --no-install-recommends \
  && apt clean && rm -rf /var/lib/apt/lists/*
 
 
